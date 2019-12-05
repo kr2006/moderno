@@ -24,7 +24,6 @@ $(function(){
         prefix: "$"
     });
 
-    var mixer = mixitup('.products__inner-box');
 
     $(".rate-star").rateYo({
         rating: 5,
@@ -39,6 +38,15 @@ $(function(){
         arrows: false,
     })
 
-   
+   $('.header__box-btn').on('click', function(){
+       $('.header__box').toggleClass('active');
+   })
+
+   $('.header__menu-btn').on('click', function(){
+    $('.menu__list').slideToggle();
+})
+
+
+   var mixer = mixitup('.products__inner-box');
 
 });
