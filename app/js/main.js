@@ -38,6 +38,28 @@ $(function(){
         slidesToScroll: 2,
         dots: true,
         arrows: false,
+        responsive: [
+            {
+              breakpoint: 1900,
+              settings: {
+                slidesToShow: 3
+              }
+            },
+            {
+                breakpoint: 1440,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 980,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+            },
+          ]
     })
 
    $('.header__box-btn').on('click', function(){
@@ -56,6 +78,7 @@ $('.product-one__tabs .tab, .settings__tabs .tab').on('click', function(event) {
         return false;
     });
 
+    $('input, select').styler();
 
    var mixer = mixitup('.products__inner-box');
 
